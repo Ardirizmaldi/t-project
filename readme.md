@@ -20,7 +20,7 @@ Run `ng build` or `webpack` to build the project. The build artifacts will be st
 
 ## Heroku APP web hosting Deploy
 
-Link: https://projec-tokoped.herokuapp.com/welcome
+Link: https://tokoped-project.herokuapp.com/welcome
 
 ## Further help
 
