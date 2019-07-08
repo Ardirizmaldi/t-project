@@ -1,0 +1,29 @@
+<mat-card>
+  <!-- Input money -->
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput placeholder="Money" [(ngModel)]='money' required>
+      </mat-form-field>
+      <p>
+        Value: Rp {{ money }}
+      </p>
+      <button class="option" mat-raised-button type="submit" (click)="onSubmit()">
+        Submit
+      </button>
+      <button class="option" mat-raised-button type="button" (click)="onClear()">
+        Clear
+      </button>
+    </div>
+
+  <!-- Money Fraction -->
+  <h3>Money Fraction</h3>
+  <button mat-raised-button>100000 = {{fcount[0]}}</button>
+  <button mat-raised-button>50000 = {{fcount[1]}}</button>
+  <button mat-raised-button>20000 = {{fcount[2]}}</button>
+  <button mat-raised-button>10000 = {{fcount[3]}}</button>
+  <button mat-raised-button>5000 = {{fcount[4]}}</button>
+  <button mat-raised-button>1000 = {{fcount[5]}}</button>
+  <button mat-raised-button>500 = {{fcount[6]}}</button>
+  <button mat-raised-button>100 = {{fcount[7]}}</button>
+  <button mat-raised-button>50 = {{fcount[8]}}</button>
+</mat-card>

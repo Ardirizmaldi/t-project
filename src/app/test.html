@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>The Greedy Algorithm</title>
+
+    <script>
+
+// ======== Here is the problem to be solved:   ========
+FRACTION = [100000, 50000, 20000, 10000, 5000, 1000, 500, 100, 50];
+AMOUNT = Math.floor(prompt("Insert Money"));
+fcount = [0,0,0,0,0,0,0,0,0];
+
+// ======== Here is where your solution begins: ========
+
+// define the function named computeChange here:
+function computeChange(coins, amount) {
+  var i = 0; var creminder = AMOUNT; var cfraction; 
+
+    while( i < FRACTION.length )
+    {
+      while ( FRACTION[i] <= creminder )
+      {
+        creminder = creminder - FRACTION[i];
+        cfraction = fcount [i] ;
+        cfraction += 1;
+        fcount [i] = cfraction ;
+
+      }
+
+      i++;
+    }
+
+    return fcount;
+}
+
+// ===================================================================
+// ======== Everything below here simply displays your output ========
+// ======== Do NOT change anything below this line ===================
+// ===================================================================
+
+
+function rightJustify(s, w) {
+    // return a string of width w with s in the rightmost characters and
+    // at least one space on the left. For simplicity, assume w < 20.
+    var slen = s.length;
+    var blanks = "                    "
+    return blanks.substr(0, Math.min(20, Math.max(1, w - slen))) + s;
+}
+
+
+function makeChange() {
+    // compute change as an array: each element of change tells
+    // how many of the corresponding value in FRACTION to give. The
+    // total value should equal AMOUNT.
+    var change = computeChange(FRACTION, AMOUNT);
+    // now format the results. Output should look like:
+    // NUMBER   VALUE
+    //    1       50
+    //    0       25
+    //    1       10
+    //    1        5
+    //    3        1
+    // TOTAL AMOUNT: 68 (total is correct)
+    //
+    // First, we'll do some type checking in case change is not of the
+    // expected type.
+    change = [].concat(change); // force whatever it is to be an array
+    // it should be an array of numbers, so let's check
+    for (i = 0; i < change.length; i++) {
+        if (typeof(change[i]) != 'number') {
+            return "Error: the function computeChange did not return " +
+                   "an array of numbers.";
+        }
+    }
+    if (change.length > FRACTION.length) {
+        return "Error: the function computeChange returned an array " +
+               "longer than the length (" + FRACTION.length + ") of FRACTION.";
+    }
+    if (change.length < FRACTION.length) {
+        return "Error: the function computeChange returned an array " +
+               "shorter than the length (" + FRACTION.length + ") of FRACTION.";
+    }
+    var output = "<pre>NUMBER   FRACTION\n"
+    var sum = 0;
+    for (i = 0; i < change.length; i++) {
+        sum += change[i] * FRACTION[i];
+        var n = change[i].toString();
+        var a = FRACTION[i].toString();
+        output += rightJustify(n, 4) + rightJustify(a, 12) + "\n";
+    }
+    output += "TOTAL MONEY: " + sum + " (total is ";
+    output += (sum == AMOUNT ? "correct" :
+                               "incorrect, should be " + AMOUNT) + ")\n";
+    return output;
+}
+
+
+function runSolution()
+{
+    parent.console.log('loaded, calling runSolution()\n');
+    parent.console.log('answer: ' + document.getElementById('answer').toString());
+    document.getElementById('answer').innerHTML = makeChange();
+}
+
+    </script>
+</head>
+<body>
+    <!-- the output is displayed using HTML     -->
+    <!-- the ? will be replaced with the answer -->
+    <div id = "answer">?</div></p>
+    <br>
+    <script>runSolution();</script>
+</body>
+</html>
