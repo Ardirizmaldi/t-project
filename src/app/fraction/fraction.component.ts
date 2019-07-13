@@ -20,7 +20,7 @@ export class FractionComponent implements OnInit {
   }
 
   // function money fraction
-  onSubmit(output: string) {
+  onSubmit() {
     let i = 0; let creminder = this.money; let ccoin;
     while (i < this.fraction.length) {
       while (this.fraction[i] <= creminder) {
