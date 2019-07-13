@@ -13,6 +13,8 @@ This web is using scss and angular material for design.
 ## Development server
 
 First instal npm run `npm install` in the folder using terminal direct to the project folder. Then, After `node_modules` installed in the folder type run `ng serve` in the terminal for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Node sass npm problem : (sudo) npm install --save-dev  --unsafe-perm node-sass
+
 
 ## Build in webpack bundle
 
@@ -31,4 +33,3 @@ Link: https://tokoped-project.herokuapp.com/welcome
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md). Or Please Contact me direcly to arizmaldi@gmail.com
-Node sass npm problem : (sudo) npm install --save-dev  --unsafe-perm node-sass
