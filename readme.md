@@ -1,4 +1,4 @@
-### Money Changer Project
+# Money Changer Project
 
 This folder contains Angular project + Webpack builder + Heroku Deploy postinstall can see in package.json.
 
@@ -21,6 +21,12 @@ Run `ng build` or `webpack` to build the project. The build artifacts will be st
 ## Heroku APP web hosting Deploy
 
 Link: https://tokoped-project.herokuapp.com/welcome
+
+## Instruction
+### Run app
+1. Input number in field
+2. Hit Enter or Click Submit button
+3. If you want to input again just click Clear button to clear input field
 
 ## Further help
 
