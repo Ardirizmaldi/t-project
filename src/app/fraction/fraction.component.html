@@ -1,17 +1,18 @@
+<!-- Body web app -->
 <mat-card>
   <!-- Input money -->
-      <mat-form-field>
-        <input matInput placeholder="Money" maxlength="8" [(ngModel)]='money' required>
-      </mat-form-field>
-      <p>
-        Money Left: Rp {{ change }},00
-      </p>
-      <button class="option" mat-raised-button type="submit" (click)="onSubmit()">
-        Submit
-      </button>
-      <button class="option" mat-raised-button type="button" (click)="onClear()">
-        Clear
-      </button>
+  <mat-form-field>
+    <input matInput placeholder="Money" maxlength="8" type="number" [(ngModel)]='money' required>
+  </mat-form-field>
+  <p>
+    Money Left: Rp {{ change }},00
+  </p>
+  <button class="option" mat-raised-button type="submit" (click)="onSubmit()">
+    Submit
+  </button>
+  <button class="option" mat-raised-button type="button" (click)="onClear()">
+    Clear
+  </button>
 
   <!-- Money Fraction -->
   <h3>Money Fraction</h3>
