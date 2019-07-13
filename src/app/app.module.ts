@@ -10,6 +10,7 @@ import { FractionComponent } from './fraction/fraction.component';
 import { HeaderComponent } from './header/header.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FractionRoutingModule } from './fraction/fraction-routing.module';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FractionRoutingModule } from './fraction/fraction-routing.module';
     FractionRoutingModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CurrencyMaskModule
   ],
   bootstrap: [AppComponent]
 })

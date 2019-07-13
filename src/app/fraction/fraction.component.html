@@ -2,10 +2,10 @@
 <mat-card>
   <!-- Input money -->
   <mat-form-field>
-    <input matInput placeholder="Money" maxlength="8" type="number" [(ngModel)]='money' required>
+    <input matInput placeholder="Money" type="tel" min="0" maxlength="15" (keydown)="onSubmit()" currencyMask [(ngModel)]='money' [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',' }" required>
   </mat-form-field>
   <p>
-    Money Left: Rp {{ change }},00
+    Money Left: Rp {{ change }}
   </p>
   <button class="option" mat-raised-button type="submit" (click)="onSubmit()">
     Submit
