@@ -2,7 +2,7 @@
 <mat-card>
   <!-- Input money -->
   <mat-form-field>
-    <input matInput placeholder="Money" type="tel" min="0" maxlength="15" (keydown)="onSubmit()" currencyMask [(ngModel)]='money' [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',' }" required>
+    <input matInput placeholder="Money" type="tel" min="0" maxlength="15" (keydown.enter)="onSubmit()" currencyMask [(ngModel)]='money' [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',' }" required>
   </mat-form-field>
   <p>
     Money Left: Rp {{ change }}
