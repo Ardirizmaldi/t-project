@@ -1,19 +1,18 @@
-form {
-  max-width: 80%;
-  margin: 2em auto;
-  text-align: center;
-}
+$width : 80%;
+$center : auto;
+$color-font : white;
 
 mat-card {
-  max-width: 80%;
-  margin: 2em auto;
+  max-width: $width;
+  margin: 3rem $center;
   text-align: center;
+  border-radius: 5%;
 }
 
 button {
-  margin: 8px;
+  margin: 0.5rem;
   background-color: #164e86;
-  color: white;
+  color: $color-font;
 }
 
 .option {
